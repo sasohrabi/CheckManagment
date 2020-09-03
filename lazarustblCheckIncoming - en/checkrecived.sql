@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS "tblCheckIncoming";
+CREATE TABLE "tblCheckIncoming" ("DescCheck" VARCHAR DEFAULT (null) ,"NameBank" VARCHAR,"NumberCheck" VARCHAR,"AmountCheck" VARCHAR,"DateIssuance" VARCHAR,"PartyAccount" INTEGER DEFAULT (null) ,"DateUsance" VARCHAR,"pass" BOOL, id INTEGER Primary KEY);
+INSERT INTO "tblCheckIncoming" VALUES('Edit1','Edit2','Edit3','Edit4','1390/09/09',101,'1391/09/09',-1,1);
+INSERT INTO "tblCheckIncoming" VALUES('بابت فاکتور 1','سپه','1234','1200000','1387/09/09',102,'1390/02/02',-1,2);
+INSERT INTO "tblCheckIncoming" VALUES('بابت فاکتور 2','تجات','212','250000','1387/01/09',102,'1390/02/02',0,3);
+INSERT INTO "tblCheckIncoming" VALUES('بابت فاکتور فروش','تجارت','1298','500000','1390/09/09',102,'1390/09/09',0,4);
+INSERT INTO "tblCheckIncoming" VALUES('بابت فاکتور خرید 3','قوامین','2340','45000','1390/09/09',104,'1390/09/09',-1,5);
+DROP TABLE IF EXISTS "tblCheckIssued";
+CREATE TABLE "tblCheckIssued" ("DescCheck" VARCHAR DEFAULT (null) ,"NameBank" VARCHAR,"NumberCheck" VARCHAR,"AmountCheck" VARCHAR,"DateIssuance" VARCHAR,"PartyAccount" INTEGER DEFAULT (null) ,"DateUsance" VARCHAR,"pass" BOOL,id INTEGER Primary KEY);
+DROP TABLE IF EXISTS "tblPartyAccount";
+CREATE TABLE "tblPartyAccount" ("code" INTEGER PRIMARY KEY  NOT NULL , "PartyAccount" VARCHAR);
+INSERT INTO "tblPartyAccount" VALUES(100,'تات');
+INSERT INTO "tblPartyAccount" VALUES(101,'س');
+INSERT INTO "tblPartyAccount" VALUES(102,'تاعال');
+INSERT INTO "tblPartyAccount" VALUES(103,'الا');

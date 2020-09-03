@@ -1,0 +1,691 @@
+object Form1: TForm1
+  Left = 100
+  Height = 549
+  Top = 124
+  Width = 1187
+  HorzScrollBar.Page = 1169
+  VertScrollBar.Page = 124
+  AutoScroll = True
+  Caption = 'Check registration form'
+  ClientHeight = 549
+  ClientWidth = 1187
+  Color = 16706240
+  OnClose = FormClose
+  OnCreate = FormCreate
+  ParentBiDiMode = False
+  Position = poScreenCenter
+  LCLVersion = '1.2.6.0'
+  object DBGrid1: TDBGrid
+    Left = 16
+    Height = 439
+    Top = 144
+    Width = 1160
+    AlternateColor = 16641273
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderStyle = bsNone
+    Color = 16056312
+    Columns = <    
+      item
+        MaxSize = 100
+        Title.Caption = 'Account side'
+        Width = 76
+        FieldName = 'namefamilyparty'
+      end    
+      item
+        MinSize = 100
+        MaxSize = 400
+        Title.Caption = 'Description'
+        Width = 68
+        FieldName = 'DescCheck'
+      end    
+      item
+        Title.Caption = 'Bank name'
+        Width = 67
+        FieldName = 'NameBank'
+      end    
+      item
+        MaxSize = 100
+        Title.Caption = 'check number '
+        Width = 81
+        FieldName = 'NumberCheck'
+      end    
+      item
+        MaxSize = 100
+        Title.Caption = 'Check amount '
+        Width = 83
+        FieldName = 'AmountCheck'
+      end    
+      item
+        MaxSize = 100
+        Title.Caption = 'Check issuance date'
+        Width = 113
+        FieldName = 'DateIssuance'
+      end    
+      item
+        MaxSize = 10
+        Title.Caption = 'کد طرف حساب'
+        Width = 0
+        Visible = False
+        FieldName = 'PartyAccount'
+      end    
+      item
+        MaxSize = 100
+        Title.Caption = 'Check due date'
+        Width = 90
+        FieldName = 'DateUsance'
+      end    
+      item
+        ButtonStyle = cbsCheckboxColumn
+        MaxSize = 20
+        Title.Caption = 'passed?'
+        Width = 54
+        ValueChecked = '-1'
+        FieldName = 'pass'
+      end    
+      item
+        MaxSize = 20
+        Title.Caption = 'کد'
+        Width = 0
+        Visible = False
+        FieldName = 'id'
+      end>
+    FixedColor = 15854847
+    FixedHotColor = 16121598
+    HeaderHotZones = []
+    HeaderPushZones = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgAutoSizeColumns]
+    ParentBiDiMode = False
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 9
+    TitleFont.CharSet = ARABIC_CHARSET
+    TitleFont.Height = -15
+    TitleFont.Name = 'Far.Nazanin'
+    TitleFont.Pitch = fpVariable
+    TitleFont.Quality = fqDraft
+    TitleFont.Style = [fsBold]
+    TitleStyle = tsNative
+  end
+  object Button3: TButton
+    Left = 189
+    Height = 32
+    Top = 2
+    Width = 115
+    Caption = 'Delete'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -13
+    Font.Name = 'B Titr'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 11
+  end
+  object Button4: TButton
+    Left = 448
+    Height = 33
+    Top = 0
+    Width = 106
+    Caption = 'Update'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -13
+    Font.Name = 'B Titr'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button4Click
+    ParentFont = False
+    TabOrder = 10
+  end
+  object Label1: TLabel
+    Left = 304
+    Height = 26
+    Top = 47
+    Width = 101
+    Caption = 'Description'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 664
+    Height = 26
+    Top = 48
+    Width = 96
+    Caption = 'Bank name'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 920
+    Height = 26
+    Top = 48
+    Width = 124
+    Caption = 'check number '
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 8
+    Height = 26
+    Top = 97
+    Width = 127
+    Caption = 'Check amount '
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 320
+    Height = 26
+    Top = 97
+    Width = 180
+    Caption = 'Check issuance date'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 0
+    Height = 26
+    Top = 47
+    Width = 112
+    Caption = 'Account side'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 680
+    Height = 26
+    Top = 97
+    Width = 134
+    Caption = 'Check due date'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label8: TLabel
+    Left = 992
+    Height = 26
+    Top = 89
+    Width = 69
+    Caption = 'Passed '
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object insert: TButton
+    Left = 960
+    Height = 33
+    Top = 0
+    Width = 104
+    Caption = 'Add'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -13
+    Font.Name = 'B Titr'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = insertClick
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Edit1: TEdit
+    Left = 408
+    Height = 34
+    Top = 40
+    Width = 232
+    Alignment = taRightJustify
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnKeyDown = Edit1KeyDown
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Edit2: TEdit
+    Left = 768
+    Height = 34
+    Top = 40
+    Width = 120
+    Alignment = taRightJustify
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnKeyDown = Edit2KeyDown
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Edit3: TEdit
+    Left = 1048
+    Height = 34
+    Top = 40
+    Width = 121
+    Alignment = taRightJustify
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnKeyDown = Edit3KeyDown
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Edit4: TEdit
+    Left = 144
+    Height = 34
+    Top = 89
+    Width = 160
+    Alignment = taRightJustify
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnKeyDown = Edit4KeyDown
+    ParentFont = False
+    TabOrder = 4
+  end
+  object CheckBox1: TCheckBox
+    Left = 1072
+    Height = 30
+    Top = 85
+    Width = 82
+    Caption = 'Yes/No'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnKeyDown = CheckBox1KeyDown
+    ParentFont = False
+    TabOrder = 7
+  end
+  object select: TButton
+    Left = 560
+    Height = 33
+    Top = 0
+    Width = 72
+    Caption = 'Select'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -13
+    Font.Name = 'B Titr'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = selectClick
+    ParentFont = False
+    TabOrder = 13
+  end
+  object Button2: TButton
+    Left = 848
+    Height = 33
+    Top = 0
+    Width = 99
+    Caption = 'Save'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -13
+    Font.Name = 'B Titr'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 8
+  end
+  object Edit5: TMaskEdit
+    Left = 512
+    Height = 34
+    Top = 89
+    Width = 120
+    CharCase = ecNormal
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    MaxLength = 10
+    ParentBiDiMode = False
+    ParentFont = False
+    TabOrder = 5
+    OnKeyDown = Edit5KeyDown
+    EditMask = '####/##/##;1;_'
+    Text = '    /  /  '
+    SpaceChar = '_'
+  end
+  object Edit7: TMaskEdit
+    Left = 824
+    Height = 34
+    Top = 90
+    Width = 121
+    CharCase = ecNormal
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    MaxLength = 10
+    ParentBiDiMode = False
+    ParentFont = False
+    TabOrder = 6
+    OnKeyDown = Edit7KeyDown
+    EditMask = '####/##/##;1;_'
+    Text = '    /  /  '
+    SpaceChar = '_'
+  end
+  object ComboBox1: TComboBox
+    Left = 120
+    Height = 34
+    Top = 39
+    Width = 163
+    AutoComplete = True
+    AutoCompleteText = [cbactEnabled, cbactEndOfLineComplete, cbactSearchAscending]
+    AutoDropDown = True
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -16
+    Font.Name = 'B Nazanin'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ItemHeight = 26
+    OnKeyDown = ComboBox1KeyDown
+    ParentBidiMode = False
+    ParentFont = False
+    ParentShowHint = False
+    Sorted = True
+    Style = csDropDownList
+    TabOrder = 0
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 632
+    Height = 31
+    Top = 90
+    Width = 23
+    Caption = '>'
+    OnClick = SpeedButton2Click
+  end
+  object SpeedButton3: TSpeedButton
+    Left = 944
+    Height = 33
+    Top = 91
+    Width = 24
+    Caption = '>'
+    OnClick = SpeedButton3Click
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 8
+    Height = 32
+    Top = 1
+    Width = 80
+    BidiMode = bdRightToLeft
+    Caption = 'Quit'
+    Font.CharSet = ARABIC_CHARSET
+    Font.Height = -13
+    Font.Name = 'B Titr'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    Glyph.Data = {
+      76020000424D760200000000000036000000280000000C0000000C0000000100
+      2000000000004002000064000000640000000000000000000000FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00A2B8F8FF084EEFFF0850F0FF0854F0FF0858
+      F0FF0858F0FF0854F0FF0850F0FF084EEFFFA2B8F8FFFFFFFF00FFFFFF000451
+      EFFF3889F6FF5299F7FF1A77F6FF0065F6FF0065F6FF1A77F6FF5299F7FF3889
+      F6FF0451EFFFFFFFFF00FFFFFF000C58F1FF6FABFDFFFFFFFFFFB2D1FEFF0062
+      FDFF0062FDFFB2D1FEFFFFFFFFFF6FABFDFF0C58F1FFFFFFFF00FFFFFF000855
+      F1FF0364FBFF8DBBFEFFFFFFFFFF89B9FDFF89B9FDFFFFFFFFFF8DBBFEFF0364
+      FBFF0855F1FFFFFFFF00FFFFFF000858F1FF0062FBFF0C6DFDFFCADFFEFFFFFF
+      FFFFFFFFFFFFCADFFEFF0C6DFDFF0062FBFF0858F1FFFFFFFF00FFFFFF000858
+      F1FF1770FBFF1673FDFFCADFFEFFFFFFFFFFFFFFFFFFCADFFEFF0C6DFDFF0062
+      FBFF0858F1FFFFFFFF00FFFFFF000855F1FF3281FCFFA2C8FEFFFFFFFFFF95C0
+      FDFF8FBDFDFFFFFFFFFF8EBCFEFF0364FBFF0855F1FFFFFFFF00FFFFFF000C58
+      F1FF8DBCFDFFFFFFFFFFC4DCFEFF3985FDFF3482FDFFBFD9FEFFFFFFFFFF7FB4
+      FDFF0C58F1FFFFFFFF00FFFFFF000451EFFF6DA8F8FF83B6F9FF5B9DF9FF468F
+      F8FF428DF8FF5198F8FF77AFF9FF5C9EF8FF0451EFFFFFFFFF00FFFFFF00A2B8
+      F8FF084EEFFF0850F0FF0854F0FF0858F0FF0858F0FF0854F0FF0850F0FF084E
+      EFFFA2B8F8FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
+    }
+    OnClick = SpeedButton1Click
+    ParentBidiMode = False
+    ParentFont = False
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Action = caNone
+    Database = SQLite3Connection1
+    Params.Strings = (
+      ''
+    )
+    left = 328
+    top = 368
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'DescCheck'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'NameBank'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'NumberCheck'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'AmountCheck'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'DateIssuance'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'PartyAccount'
+        DataType = ftInteger
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'DateUsance'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end    
+      item
+        Name = 'pass'
+        DataType = ftLargeint
+        Precision = -1
+        Size = 0
+      end    
+      item
+        Name = 'namefamilyparty'
+        DataType = ftString
+        Precision = -1
+        Size = 255
+      end>
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT tblCheckIncoming.id,tblCheckIncoming.DescCheck, tblCheckIncoming.NameBank, tblCheckIncoming.NumberCheck'
+      '          , tblCheckIncoming.AmountCheck'
+      '          , tblCheckIncoming.DateIssuance, tblCheckIncoming.PartyAccount, tblCheckIncoming.DateUsance,'
+      '           tblCheckIncoming.pass, tblPartyAccount.PartyAccount as namefamilyparty'
+      '           FROM tblPartyAccount INNER JOIN tblCheckIncoming ON tblPartyAccount.[code] = tblCheckIncoming.[PartyAccount];'
+    )
+    Params = <>
+    left = 408
+    top = 368
+  end
+  object Datasource1: TDataSource
+    Enabled = False
+    left = 480
+    top = 368
+  end
+  object SQLQuery2: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    left = 408
+    top = 424
+  end
+  object SQLite3Connection1: TSQLite3Connection
+    Connected = False
+    LoginPrompt = False
+    DatabaseName = 'H:\saeed\SAEED PROJECT\Lazarus\checklaz\lazarustblCheckIncoming\checkrecived.sqlite'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    LogEvents = []
+    Options = []
+    left = 224
+    top = 368
+  end
+  object frDBDataSet1: TfrDBDataSet
+    OpenDataSource = False
+    OnCheckEOF = frDBDataSet1CheckEOF
+    left = 640
+    top = 424
+  end
+  object frReport1: TfrReport
+    Dataset = frDBDataSet1
+    InitialZoom = pzDefault
+    Options = []
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    DataType = dtDataSet
+    Title = 'Albaranes de clientes'
+    left = 640
+    top = 368
+  end
+  object SQLQuery3: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'sip'
+        DataType = ftLargeint
+        Precision = -1
+        Size = 0
+      end>
+    AutoCalcFields = False
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select sip from passincoming'
+      ''
+    )
+    Params = <>
+    DataSource = Datasource1
+    left = 408
+    top = 480
+    object SQLQuery3sip: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'sip'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+  object SQLQuery4: TSQLQuery
+    FieldDefs = <    
+      item
+        Name = 'siup'
+        DataType = ftLargeint
+        Precision = -1
+        Size = 0
+      end>
+    AutoCalcFields = False
+    Database = SQLite3Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select siup from unpassincoming'
+    )
+    Params = <>
+    DataSource = Datasource1
+    left = 408
+    top = 536
+    object SQLQuery4siup: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'siup'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+  end
+end
